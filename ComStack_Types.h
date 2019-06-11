@@ -16,10 +16,10 @@
 
 /**  Type Definition  **/
 /* Software modules deals with PDUs that 256 */
-#define PduIdType		uint8
-#define PduLengthType		uint8
-#define PNCHandleType		uint8
-#define IcomConfigIdType	uint8;
+ uint8	PduIdType;		
+ uint8	PduLengthType;		
+ uint8	PNCHandleType;		
+ uint8	IcomConfigIdType;	
 
 /* This type can be used as standard API return type which is shared between the RTE and the BSW modules */
 typedef uint8 Std_ReturnType;
