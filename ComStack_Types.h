@@ -25,58 +25,42 @@
 typedef uint8 Std_ReturnType;
 
 enum TPParameterType {
-	/* Separation Time */
-	TP_STMIN	= 0x00,
-	/* Block Size */
-	TP_BS 		= 0x01,
-	/* The Band width control parameter used in FlexRay transport protocol module */
-	TP_BC 		= 0x02
+	TP_STMIN	= 0x00,	/* Separation Time */
+	TP_BS 		= 0x01,	/* Block Size */
+	TP_BC 		= 0x02	/* The Band width control parameter used in FlexRay transport protocol module */
 };
 
 /** Symbol Definition **/
+
 enum BufReq_ReturnType {
-	/* Buffer request accomplished successful */
-	BUFREQ_OK 	= 0x00,
-	/* Buffer request not successful. Buffer cannot be accessed */
-	BUFREQ_E_NOT_OK = 0x01,
-	/* Temporarily no buffer available. It's up the requester to retry request for a certain time */
-	BUFREQ_E_BUSY 	= 0x02,
-	/* No Buffer of the required length can be provided */
-	BUFREQ_E_OVFL 	= 0x03
+	BUFREQ_OK 	= 0x00,	/* Buffer request accomplished successful */
+	BUFREQ_E_NOT_OK = 0x01,	/* Buffer request not successful. Buffer cannot be accessed */
+	BUFREQ_E_BUSY 	= 0x02,	/* Temporarily no buffer available. It's up the requester to retry request for a certain time */
+	BUFREQ_E_OVFL 	= 0x03	/* No Buffer of the required length can be provided */
 };
 
 enum TpDataStateType {
-	/* All data that have been copied so far,
-	 * are confirmed and can be removed from the TP buffer
-	 */
-	TP_DATACONF 	= 0x00,
-	/* API call shall copy already copied data in order to recover from an error */
-	TP_DATARETRY 	= 0x01,
-	/* The previously copied data must remain in the TP */
-	TP_CONFPENDING 	= 0x02
+	TP_DATACONF 	= 0x00,	/* All data that have been copied so far,
+				 * are confirmed and can be removed from the TP buffer */
+	TP_DATARETRY 	= 0x01,	/* API call shall copy already copied data in order to recover from an error */
+	TP_CONFPENDING 	= 0x02	/* The previously copied data must remain in the TP */
 };
 
 enum IcomSwitch_ErrorType {
-	/* The activation of Pretended Networking was successful */
-	ICOM_SWITCH_E_OK 	= 0x00,
-	/* The activation of Pretended Networking was not */
-	ICOM_SWITCH_E_FAILED 	= 0x01
+	ICOM_SWITCH_E_OK 	= 0x00,	/* The activation of Pretended Networking was successful */
+	ICOM_SWITCH_E_FAILED 	= 0x01	/* The activation of Pretended Networking was not */
 };
 
 struct PduInfoType {
-	/* Pointer to the SDU of the PDU */
-	uint8 *SduDataPtr;
-	/* Pointer to the meta data of the PDU */
-	uint8 *MetaDataPtr;
-	/* Length of the SDU in bytes */
-	PduLengthType SduLength;
+	uint8 *SduDataPtr;		/* Pointer to the SDU of the PDU */
+	uint8 *MetaDataPtr;		/* Pointer to the meta data of the PDU */
+	PduLengthType SduLength;	/* Length of the SDU in bytes */
 };
 
 struct RetryInfoType {
-	/* The enumeration type to be used to store the state of Tp buffer */
-	enum TpDataStateType TpDataState;
-	/* Offset from the current position which identifies the number of bytes to be retransmitted */
-	PduLengthType TxTpDataCnt;
+	
+	enum TpDataStateType TpDataState;	/* The enumeration type to be used to store the state of Tp buffer */
+	PduLengthType TxTpDataCnt;		/* Offset from the current position which identifies the number of bytes to be retransmitted */
 };
 
 #endif /* COMSTACK_TYPES_H */
