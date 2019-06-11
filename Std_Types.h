@@ -44,6 +44,4 @@ struct Std_VersionInfoType {
 	uint8 sw_patch_version;
 };
 
-
-
 #endif /* STD_TYPES_H */

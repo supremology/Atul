@@ -12,7 +12,6 @@
 #include"Std_Types.h"
 #include"ComStack_Cfg.h"
 
-
 /***** API Specification  *****/
 
 /**  Type Definition  **/
@@ -64,7 +63,7 @@ enum IcomSwitch_ErrorType {
 	ICOM_SWITCH_E_FAILED = 0x01
 };
 
-struct PduInfoType{
+struct PduInfoType {
 	/* Pointer to the SDU of the PDU */
 	uint8 *SduDataPtr;
 	/* Pointer to the meta data of the PDU */

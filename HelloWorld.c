@@ -9,13 +9,11 @@
 #include<stdio.h>
 #include<conio.h>
 
-int main()
-{
+int main() {
 	printf("HelloWorld\n");
-	printf("Value at STD_ON: %x\n",STD_ON);
+	printf("Value at STD_ON: %x\n", STD_ON);
 	printf("Return values TRUE stand for : %d\n", TRUE);
 
 	return 0;
 }
-
 

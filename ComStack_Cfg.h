@@ -8,6 +8,4 @@
 #ifndef COMSTACK_CFG_H
 #define COMSTACK_CFG_H
 
-
-
 #endif /* COMSTACK_CFG_H */
