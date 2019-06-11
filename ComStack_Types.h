@@ -16,7 +16,7 @@
 
 /**  Type Definition  **/
 /* Software modules deals with PDUs that 256 */
-#define PduIdType			uint8
+#define PduIdType		uint8
 #define PduLengthType		uint8
 #define PNCHandleType		uint8
 #define IcomConfigIdType	uint8;
@@ -36,31 +36,31 @@ enum TPParameterType {
 /** Symbol Definition **/
 enum BufReq_ReturnType {
 	/* Buffer request accomplished successful */
-	BUFREQ_OK = 0x00,
+	BUFREQ_OK 	= 0x00,
 	/* Buffer request not successful. Buffer cannot be accessed */
 	BUFREQ_E_NOT_OK = 0x01,
 	/* Temporarily no buffer available. It's up the requester to retry request for a certain time */
-	BUFREQ_E_BUSY = 0x02,
+	BUFREQ_E_BUSY 	= 0x02,
 	/* No Buffer of the required length can be provided */
-	BUFREQ_E_OVFL = 0x03
+	BUFREQ_E_OVFL 	= 0x03
 };
 
 enum TpDataStateType {
 	/* All data that have been copied so far,
 	 * are confirmed and can be removed from the TP buffer
 	 */
-	TP_DATACONF = 0x00,
+	TP_DATACONF 	= 0x00,
 	/* API call shall copy already copied data in order to recover from an error */
-	TP_DATARETRY = 0x01,
+	TP_DATARETRY 	= 0x01,
 	/* The previously copied data must remain in the TP */
-	TP_CONFPENDING = 0x02
+	TP_CONFPENDING 	= 0x02
 };
 
 enum IcomSwitch_ErrorType {
 	/* The activation of Pretended Networking was successful */
-	ICOM_SWITCH_E_OK = 0x00,
+	ICOM_SWITCH_E_OK 	= 0x00,
 	/* The activation of Pretended Networking was not */
-	ICOM_SWITCH_E_FAILED = 0x01
+	ICOM_SWITCH_E_FAILED 	= 0x01
 };
 
 struct PduInfoType {
