@@ -16,8 +16,8 @@
 
 /**  Type Definition  **/
 /* Software modules deals with PDUs that 256 */
- uint8	PduIdType;		
- uint8	PduLengthType;		
+		
+ #define PduLengthType	uint8		
  uint8	PNCHandleType;		
  uint8	IcomConfigIdType;	
 
