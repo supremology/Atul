@@ -26,11 +26,11 @@ typedef uint8 Std_ReturnType;
 
 enum TPParameterType {
 	/* Separation Time */
-	TP_STMIN = 0x00,
+	TP_STMIN	= 0x00,
 	/* Block Size */
-	TP_BS = 0x01,
+	TP_BS 		= 0x01,
 	/* The Band width control parameter used in FlexRay transport protocol module */
-	TP_BC = 0x02
+	TP_BC 		= 0x02
 };
 
 /** Symbol Definition **/
