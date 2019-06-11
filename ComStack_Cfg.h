@@ -8,4 +8,7 @@
 #ifndef COMSTACK_CFG_H
 #define COMSTACK_CFG_H
 
+uint8	PduIdType;		
+uint8	PduLengthType;
+
 #endif /* COMSTACK_CFG_H */
